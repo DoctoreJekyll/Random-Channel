@@ -25,8 +25,6 @@ public class EnemiesSpawner : MonoBehaviour
 
     public void GenerateEnemy()
     {
-        Debug.Log(transform.position);
-        
         if (canCreate)
         {
             enemyPoolIndex++;

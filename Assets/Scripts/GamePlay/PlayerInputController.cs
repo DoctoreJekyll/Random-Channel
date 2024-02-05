@@ -45,12 +45,17 @@ public class PlayerInputController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        NewMethod();
+    }
+
+    private void NewMethod()
+    {
         if (runByYouWin)
         {
             rb2D.constraints = RigidbodyConstraints2D.None;
             rb2D.freezeRotation = true;
-            if (rb2D.velocity.y<=0)
-                rb2D.velocity = new Vector2(playerVelocity.x, rb2D.velocity.y*50) * Time.deltaTime;
+            if (rb2D.velocity.y <= 0)
+                rb2D.velocity = new Vector2(playerVelocity.x, rb2D.velocity.y * 50) * Time.deltaTime;
         }
     }
 }

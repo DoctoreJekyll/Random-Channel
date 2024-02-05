@@ -108,6 +108,7 @@ public class GameOverManager : MonoBehaviour
         {
             enemyMovements[i].enemyMovement = Vector2.zero;
             enemyMovements[i].gameObject.GetComponent<Collider2D>().enabled = false; //Nuevo
+            enemyMovements[i].gameObject.GetComponent<Rigidbody2D>().gravityScale = 0f; //Nuevo
             enemyMovements[i].transform.GetChild(0).GetComponent<Collider2D>().enabled = false; //Nuevo
         }       
     }

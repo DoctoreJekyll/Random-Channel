@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PopCornSpawner : MonoBehaviour
 {
     public static PopCornSpawner popCornSpawnerInstance;
+    public bool work;
 
     [SerializeField] GameObject[] popCornArray;
     [SerializeField] GameObject popCornForRow1, popCornForRow2, popCornForRow3, popCornForRow4;
@@ -13,6 +16,7 @@ public class PopCornSpawner : MonoBehaviour
 
     [SerializeField] int popCornPoolIndex;
     public bool canCreate;
+    private float timer;
 
 
     private void Awake()
@@ -20,12 +24,27 @@ public class PopCornSpawner : MonoBehaviour
         popCornSpawnerInstance = this;
     }
 
-    private void Start()
+    private void Update()
     {
-        Invoke("GeneratePopCorn", spawnerTime[Random.Range(0, spawnerTime.Length)]);
+        if (work)
+        {
+            GetSpawnerTime();
+            timer -= Time.deltaTime;
+        
+            if (timer < 0)
+            {
+                GeneratePopCorn();
+                GetSpawnerTime();
+            }
+        }
     }
 
-    public void GeneratePopCorn()
+    private void GetSpawnerTime()
+    {
+        timer = Random.Range(0, spawnerTime[Random.Range(0,spawnerTime.Length)]);
+    }
+
+    private void GeneratePopCorn()
     {
         if (canCreate)
         {
@@ -44,7 +63,6 @@ public class PopCornSpawner : MonoBehaviour
                 StartCoroutine(CoroutineCreatePopCornRow());
             }
         }
-        Invoke("GeneratePopCorn", spawnerTime[Random.Range(0, spawnerTime.Length)]);
     }
 
     float RandomizePopCornHeight()
