@@ -24,24 +24,34 @@ public class PopCornSpawner : MonoBehaviour
         popCornSpawnerInstance = this;
     }
 
+    private void Start()
+    {
+        GetSpawnerTime();
+    }
+
     private void Update()
     {
-        if (work)
+        if (canCreate)
         {
-            GetSpawnerTime();
-            timer -= Time.deltaTime;
-        
-            if (timer < 0)
+            if (work)
             {
-                GeneratePopCorn();
-                GetSpawnerTime();
+                timer -= Time.deltaTime;
+        
+                if (timer < 0)
+                {
+                    GeneratePopCorn();
+                    GetSpawnerTime();
+                }
             }
         }
+
     }
 
     private void GetSpawnerTime()
     {
-        timer = Random.Range(0, spawnerTime[Random.Range(0,spawnerTime.Length)]);
+        int randomIndex = Random.Range(0, spawnerTime.Length);
+        float randomValue = spawnerTime[randomIndex];
+        timer = randomValue;
     }
 
     private void GeneratePopCorn()
@@ -83,5 +93,29 @@ public class PopCornSpawner : MonoBehaviour
         Instantiate(popCornForRow3, new Vector3(transform.position.x, temp, transform.position.z), Quaternion.identity);
         yield return new WaitForSeconds(0.4f);
         Instantiate(popCornForRow4, new Vector3(transform.position.x, temp, transform.position.z), Quaternion.identity);
+    }
+    
+    public void DestroyThisObj()
+    {
+        if (!work)
+        {
+            PopCorn[] allPop = FindObjectsOfType<PopCorn>();
+
+            foreach (PopCorn popCorn in allPop)
+            {
+                Vector3 viewportPosition = Camera.main.WorldToViewportPoint(popCorn.transform.position);
+                if (viewportPosition.x < 0 || viewportPosition.x > 1 ||
+                    viewportPosition.y < 0 || viewportPosition.y > 1 ||
+                    viewportPosition.z < 0)
+                {
+                    Destroy(popCorn.gameObject);
+                }
+            }
+        }
+    }
+
+    public void StopWorking()
+    {
+        work = false;
     }
 }

@@ -1501,6 +1501,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 008478eeab0eba54db565f6fa11461e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  work: 1
   enemiesArray:
   - {fileID: 1789659560}
   - {fileID: 296528237}
@@ -1513,10 +1514,10 @@ MonoBehaviour:
   - {fileID: 437517264}
   - {fileID: 1065022527}
   spawnerTime:
-  - 4
+  - 3
   - 6
-  - 8
-  - 10
+  - 7
+  - 9
   enemyPoolIndex: -1
   canCreate: 0
 --- !u!4 &302309783
@@ -2324,6 +2325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06675cc97a5310d4b904605b5b7876ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  work: 1
   platformArray:
   - {fileID: 101626962}
   - {fileID: 1192758875}
@@ -2801,9 +2803,9 @@ MonoBehaviour:
   mediumHeight: 0.6
   highHeight: 2.75
   spawnerTime:
+  - 1
   - 2
   - 3
-  - 4
   popCornPoolIndex: 0
   canCreate: 0
 --- !u!4 &524104351
@@ -4160,8 +4162,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa933f5f3fa1b414c9dc4af298f94a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initBoss: {fileID: 2435479670669249153, guid: abfa9ffae9a36574a8ce60496f330396, type: 3}
   timeStart: 0
-  counter: 16
+  counter: 10
   timeText: {fileID: 676519644}
   popCorn: 0
   popCornText: {fileID: 1257956206}
