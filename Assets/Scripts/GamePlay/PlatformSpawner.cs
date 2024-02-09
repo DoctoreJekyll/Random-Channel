@@ -86,8 +86,8 @@ public class PlatformSpawner : MonoBehaviour
         }
     }
 
-    public void StopWorking()
+    public void ChangeWorking()
     {
-        work = false;
+        work = !work;
     }
 }

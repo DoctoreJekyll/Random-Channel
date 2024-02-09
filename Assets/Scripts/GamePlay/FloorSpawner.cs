@@ -69,7 +69,7 @@ public class FloorSpawner : MonoBehaviour
 
     public void CreateBigFloorByGameOver()
     {
-        TestPrepareFloorForBig();
+        //TestPrepareFloorForBig();
         if (/*lastFloorCreated*/prepreLastFloorCreated.GetComponent<PlatformMovement>().isHole)
         {
            GameObject bigFloorTemp = Instantiate(bigFloorFinalPhase,

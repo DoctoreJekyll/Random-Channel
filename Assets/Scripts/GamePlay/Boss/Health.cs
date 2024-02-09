@@ -1,19 +1,42 @@
+using System;
 using UnityEngine;
 
 namespace GamePlay.Boss
 {
     public class Health : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
+        [SerializeField] private int life;
+
+        private void Update()
         {
-        
+            Dead();
         }
 
-        // Update is called once per frame
-        void Update()
+        private void OnTriggerEnter(Collider other)
         {
-        
+            Projectile projectile = other.GetComponent<Projectile>();
+            if (projectile != null)
+            {
+                LoseLife();
+                Destroy(projectile.gameObject);
+            }
         }
+
+        private void Dead()
+        {
+            if (life <= 0)
+            {
+                life = 0;
+                Destroy(this.gameObject);
+            }
+        }
+
+
+        private void LoseLife()
+        {
+            life -= 1;
+        }
+
+
     }
 }

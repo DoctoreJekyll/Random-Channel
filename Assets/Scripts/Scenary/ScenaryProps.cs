@@ -1,38 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ScenaryProps : MonoBehaviour
+namespace Scenary
 {
-    [SerializeField] Rigidbody2D rb2D;
-    [SerializeField] Vector2 propMovement;
-
-    public bool canRun;
-    [SerializeField] float timeToDestroy;
-
-
-    // Start is called before the first frame update
-    void Start()
+    public class ScenaryProps : MonoBehaviour
     {
+        [SerializeField] Rigidbody2D rb2D;
+        [SerializeField] Vector2 propMovement;
 
-    }
+        public bool canRun;
+        [SerializeField] float timeToDestroy;
 
-    private void FixedUpdate()
-    {
-        if (canRun)
+
+        // Start is called before the first frame update
+        void Start()
         {
-            rb2D.velocity = propMovement * Time.deltaTime;
+
         }
-    }
+        
 
-    private void Update()
-    {
-        if (canRun)
+        private void FixedUpdate()
         {
-            timeToDestroy -= Time.deltaTime;
-            if (timeToDestroy <= 0)
+            if (canRun)
             {
-                Destroy(gameObject);
+                rb2D.velocity = propMovement * Time.deltaTime;
+            }
+        }
+
+        private void Update()
+        {
+            if (canRun)
+            {
+                timeToDestroy -= Time.deltaTime;
+                if (timeToDestroy <= 0)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
     }

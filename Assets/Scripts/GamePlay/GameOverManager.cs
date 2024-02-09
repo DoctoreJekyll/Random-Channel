@@ -84,19 +84,9 @@ public class GameOverManager : MonoBehaviour
     public void CoroutineYouWinPhase()
     {
         //yield return new WaitForSeconds(9f);
-
         PlayerInputController.playerInputControllerInstance.runByYouWin = true;
 
-        for (int i = 0; i < parallaxs.Length; i++)
-        {
-            parallaxs[i].ChangeParallaxState(true);
-        }
-
-        platforms = FindObjectsOfType<PlatformMovement>();
-        for (int i = 0; i < platforms.Length; i++)
-        {
-            platforms[i].platformMovement = Vector2.zero;
-        }
+        StopMovements();
 
         popCorns = FindObjectsOfType<PopCorn>();
         for (int i = 0; i < popCorns.Length; i++)
@@ -112,5 +102,19 @@ public class GameOverManager : MonoBehaviour
             enemyMovements[i].gameObject.GetComponent<Rigidbody2D>().gravityScale = 0f; //Nuevo
             enemyMovements[i].transform.GetChild(0).GetComponent<Collider2D>().enabled = false; //Nuevo
         }       
+    }
+
+    public void StopMovements()
+    {
+        foreach (var t in parallaxs)
+        {
+            t.ChangeParallaxState(true);
+        }
+
+        platforms = FindObjectsOfType<PlatformMovement>();
+        foreach (var t in platforms)
+        {
+            t.platformMovement = Vector2.zero;
+        }
     }
 }

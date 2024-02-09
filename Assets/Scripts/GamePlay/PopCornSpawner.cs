@@ -114,8 +114,8 @@ public class PopCornSpawner : MonoBehaviour
         }
     }
 
-    public void StopWorking()
+    public void ChangeWorking()
     {
-        work = false;
+        work = !work;
     }
 }

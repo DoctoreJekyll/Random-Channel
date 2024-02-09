@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using GamePlay;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,7 +8,8 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager scoreManagerInstance;
-    [SerializeField] private GameObject initBoss;
+    [SerializeField] private BossStart bossStart;
+    
 
     public bool timeStart;
     public float counter;
@@ -63,7 +65,7 @@ public class ScoreManager : MonoBehaviour
             timeisZero = true;
             counter = 0;
             timeText.text = "00:00";
-            Instantiate(initBoss, transform.position, quaternion.identity);
+            bossStart.BossPhaseInit();
         }
 
     }

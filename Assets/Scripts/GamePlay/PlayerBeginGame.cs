@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using GamePlay;
+using Scenary;
 using UnityEngine;
 
 public class PlayerBeginGame : MonoBehaviour
