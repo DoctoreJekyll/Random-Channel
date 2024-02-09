@@ -23,19 +23,22 @@ namespace GamePlay
             enemiesSpawner = FindObjectOfType<EnemiesSpawner>();
 
             bossPos = GameObject.FindWithTag("BossStart").transform;
+            bossIsStart = true;
         }
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            bossIsStart = true;
-            
             if (bossIsStart)
             {
-                SetComponentsUnabled();
-                DestroyRest();
+                if (col.gameObject.CompareTag("Player"))
+                {
+                    bossIsStart = false;
+                    SetComponentsUnabled();
+                    DestroyRest();
 
-                StartCoroutine(InstantiateBossCorroutine());
-                bossIsStart = false;
+                    StartCoroutine(InstantiateBossCorroutine());
+
+                }
             }
 
         }
@@ -61,7 +64,7 @@ namespace GamePlay
             FloorSpawner.floorSpawnerInstance.CreateBigFloorByGameOver();
             yield return new WaitForSeconds(3f);
             GameOverManager.gameOverManagerInstance.StopMovements();
-            Instantiate(boss, bossPos.position, quaternion.identity);
+            Instantiate(boss, bossPos.position + (Vector3.right), quaternion.identity);
         }
     }
 }

@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2659866610166957916}
   - component: {fileID: 3047573623740327453}
+  - component: {fileID: 6581231712594195043}
   - component: {fileID: 6235434243441292175}
-  m_Layer: 6
+  - component: {fileID: 3558646087026337564}
+  m_Layer: 0
   m_Name: BossStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,6 +80,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 67.39908}
   m_EdgeRadius: 0
+--- !u!50 &6581231712594195043
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435479670669249153}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &6235434243441292175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,3 +121,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 2928270648827676943, guid: 247cac37c542d6a4f86439fe7353cd09, type: 3}
   bossPos: {fileID: 0}
+--- !u!114 &3558646087026337564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2435479670669249153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 165cbcf1bffbde54fbb5aa337181ced5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2D: {fileID: 6581231712594195043}
+  enemyMovement: {x: -300, y: 0}
+  canRun: 1

@@ -2016,7 +2016,7 @@ GameObject:
   - component: {fileID: 394501890}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2789,7 +2789,7 @@ MonoBehaviour:
   holeSeparation: {x: 11.5, y: 0, z: 0}
   doubleHoleSeparation: {x: 6.5, y: 0, z: 0}
   isGameOver: 0
-  bigFloorFinalPhase: {fileID: 430036675734253284, guid: 9ee28008da3d3fe43a444bdf9ab6eeeb, type: 3}
+  bigFloorFinalPhase: {fileID: 430036675734253284, guid: 0f7be9fb72b95754498f048705106530, type: 3}
 --- !u!4 &473715366
 Transform:
   m_ObjectHideFlags: 0
