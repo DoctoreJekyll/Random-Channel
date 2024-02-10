@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 5
+  isABoss: 1
 --- !u!114 &662336361653425976
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -70,7 +70,7 @@ public class ScoreManager : MonoBehaviour
 
     }
 
-    void CheckYouWinTimer()
+    public void CheckYouWinTimer()
     {
         if(counter <= 0 && !generateYouWinOneTime) //Menos 5 pruebas jose diciembre
         {

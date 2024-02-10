@@ -135,5 +135,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2D: {fileID: 6581231712594195043}
-  enemyMovement: {x: -600, y: 0}
+  enemyMovement: {x: -800, y: 0}
   canRun: 1

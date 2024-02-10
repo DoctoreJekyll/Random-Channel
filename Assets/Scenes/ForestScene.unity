@@ -2240,6 +2240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
+  isABoss: 0
 --- !u!70 &394501891
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2273,7 +2274,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.022745704, y: -0.028433038}
-  m_Size: {x: 0.8395786, y: 2.5792062}
+  m_Size: {x: 1.56, y: 2.5792062}
   m_Direction: 0
 --- !u!114 &394501892
 MonoBehaviour:
@@ -3199,7 +3200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e80ed78ca6b5294791d0f8f135abd0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canDesactiveEnemies: 0
+  canDesactiveEnemies: 1
 --- !u!61 &572335353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4671,7 +4672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e80ed78ca6b5294791d0f8f135abd0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canDesactiveEnemies: 0
+  canDesactiveEnemies: 1
 --- !u!61 &896363612
 BoxCollider2D:
   m_ObjectHideFlags: 0

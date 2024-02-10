@@ -1,11 +1,16 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace GamePlay.Boss
 {
     public class Health : MonoBehaviour
     {
         [SerializeField] private int life;
+
+        [SerializeField] private bool isABoss;
+        
+        
 
         private void Update()
         {
@@ -27,7 +32,7 @@ namespace GamePlay.Boss
             if (life <= 0)
             {
                 life = 0;
-                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
             }
         }
 
@@ -37,6 +42,16 @@ namespace GamePlay.Boss
             life -= 1;
         }
 
-
+        private void OnDisable()
+        {
+            if (isABoss)
+            {
+                GameOverManager.gameOverManagerInstance.InitilizeYouWin();
+            }
+            else
+            {
+                GameOverManager.gameOverManagerInstance.InitializeGameOver(true);
+            }
+        }
     }
 }
