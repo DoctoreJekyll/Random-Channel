@@ -63,7 +63,7 @@ namespace GamePlay
 
         IEnumerator InstantiateBossCorroutine()
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
             //GameOverManager.gameOverManagerInstance.StopMovements();
             playerShoot.enabled = true;
             Instantiate(boss, bossPos.position + (Vector3.right), quaternion.identity);

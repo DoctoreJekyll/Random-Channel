@@ -2239,7 +2239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de8c23a9eda2144429e00109fb901fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 1
+  life: 50
   isABoss: 0
 --- !u!70 &394501891
 CapsuleCollider2D:
@@ -2838,7 +2838,7 @@ MonoBehaviour:
   holeSeparation: {x: 11.5, y: 0, z: 0}
   doubleHoleSeparation: {x: 6.5, y: 0, z: 0}
   isGameOver: 0
-  bigFloorFinalPhase: {fileID: 430036675734253284, guid: 0f7be9fb72b95754498f048705106530, type: 3}
+  bigFloorFinalPhase: {fileID: 430036675734253284, guid: 9ee28008da3d3fe43a444bdf9ab6eeeb, type: 3}
 --- !u!4 &473715366
 Transform:
   m_ObjectHideFlags: 0
@@ -3723,9 +3723,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initBoss: {fileID: 2435479670669249153, guid: abfa9ffae9a36574a8ce60496f330396, type: 3}
-  platformsWithEnemiesjif:
-  - {fileID: 527816301}
-  - {fileID: 1205271135}
 --- !u!1 &724529327
 GameObject:
   m_ObjectHideFlags: 0
@@ -8051,6 +8048,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0deeb139a1100e9448a86bc4700a93db, type: 3}
   - {fileID: 8300000, guid: 6750807f279ede044b0c21a6212064da, type: 3}
   clipCaida: {fileID: 8300000, guid: e62631d1b91b35f4bad7239c94fb8cc0, type: 3}
+  playerShootComponent: {fileID: 394501886}
 --- !u!4 &1693075448
 Transform:
   m_ObjectHideFlags: 0
