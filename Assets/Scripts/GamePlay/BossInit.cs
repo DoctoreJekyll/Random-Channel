@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using GamePlay.Boss;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -14,7 +15,7 @@ namespace GamePlay
         [SerializeField] private GameObject boss;
         [SerializeField] private Transform bossPos;
 
-        private bool bossIsStart;
+        public bool bossIsntStart;
         
         private void Awake()
         {
@@ -23,16 +24,19 @@ namespace GamePlay
             enemiesSpawner = FindObjectOfType<EnemiesSpawner>();
 
             bossPos = GameObject.FindWithTag("BossStart").transform;
-            bossIsStart = true;
+            bossIsntStart = true;
         }
+
+        private Shoot playerShoot;
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            if (bossIsStart)
+            if (bossIsntStart)
             {
                 if (col.gameObject.CompareTag("Player"))
                 {
-                    bossIsStart = false;
+                    playerShoot = col.GetComponent<Shoot>();
+                    bossIsntStart = false;
                     SetComponentsUnabled();
                     DestroyRest();
 
@@ -46,7 +50,7 @@ namespace GamePlay
         private void SetComponentsUnabled()
         {
             popCornSpawner.ChangeWorking();
-            platformSpawner.ChangeWorking();
+            //platformSpawner.ChangeWorking();
             enemiesSpawner.ChangeWorking();
             
         }
@@ -54,16 +58,14 @@ namespace GamePlay
         private void DestroyRest()
         {
             enemiesSpawner.DestroyThisObj();
-            platformSpawner.DestroyThisObj();
             popCornSpawner.DestroyThisObj();
         }
 
         IEnumerator InstantiateBossCorroutine()
         {
             yield return new WaitForSeconds(2.5f);
-            FloorSpawner.floorSpawnerInstance.CreateBigFloorByGameOver();
-            yield return new WaitForSeconds(3f);
-            GameOverManager.gameOverManagerInstance.StopMovements();
+            //GameOverManager.gameOverManagerInstance.StopMovements();
+            playerShoot.enabled = true;
             Instantiate(boss, bossPos.position + (Vector3.right), quaternion.identity);
         }
     }

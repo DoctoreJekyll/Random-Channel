@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boss: {fileID: 2928270648827676943, guid: 247cac37c542d6a4f86439fe7353cd09, type: 3}
   bossPos: {fileID: 0}
+  bossIsntStart: 0
 --- !u!114 &3558646087026337564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,5 +135,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2D: {fileID: 6581231712594195043}
-  enemyMovement: {x: -300, y: 0}
+  enemyMovement: {x: -600, y: 0}
   canRun: 1

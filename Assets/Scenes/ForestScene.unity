@@ -1211,6 +1211,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244703298}
   m_CullTransparentMesh: 1
+--- !u!1 &270635660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 270635661}
+  m_Layer: 8
+  m_Name: Shoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &270635661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270635660}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.52, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 394501885}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &280345418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2014,6 +2045,7 @@ GameObject:
   - component: {fileID: 394501886}
   - component: {fileID: 394501891}
   - component: {fileID: 394501890}
+  - component: {fileID: 394501892}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -2110,6 +2142,7 @@ Transform:
   - {fileID: 2127795139}
   - {fileID: 960010464}
   - {fileID: 2044952210}
+  - {fileID: 270635661}
   m_Father: {fileID: 1132194858}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &394501886
@@ -2242,6 +2275,21 @@ CapsuleCollider2D:
   m_Offset: {x: -0.022745704, y: -0.028433038}
   m_Size: {x: 0.8395786, y: 2.5792062}
   m_Direction: 0
+--- !u!114 &394501892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394501882}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a793df48925210b4fb6a801660af240e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1862378636481649646, guid: 73737f8de633c0540a20d52949ddb32a, type: 3}
+  shootPos: {fileID: 270635661}
+  timeToShoot: 1
 --- !u!1001 &397106615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3674,6 +3722,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initBoss: {fileID: 2435479670669249153, guid: abfa9ffae9a36574a8ce60496f330396, type: 3}
+  platformsWithEnemiesjif:
+  - {fileID: 527816301}
+  - {fileID: 1205271135}
 --- !u!1 &724529327
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,9 +12,9 @@ namespace GamePlay.Boss
             Dead();
         }
 
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerEnter2D(Collider2D col)
         {
-            Projectile projectile = other.GetComponent<Projectile>();
+            Projectile projectile = col.GetComponent<Projectile>();
             if (projectile != null)
             {
                 LoseLife();
