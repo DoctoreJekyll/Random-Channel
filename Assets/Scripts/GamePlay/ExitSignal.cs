@@ -19,7 +19,7 @@ public class ExitSignal : MonoBehaviour
 
     IEnumerator CoroutineNextLevel()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene(nextPhase);
     }
 }

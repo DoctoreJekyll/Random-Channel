@@ -68,9 +68,18 @@ public class GameOverManager : MonoBehaviour
         EnemiesSpawner.enemiesSpawnerInstance.canCreate = false;
         gameOverPanel.SetActive(true);
     }
+    
+    
 
     public void InitilizeYouWin()
-    {        
+    {
+        StartCoroutine(WinCorroutine());
+        //StartCoroutine(CoroutineYouWinPhase());
+    }
+
+    IEnumerator WinCorroutine()
+    {
+        yield return new WaitForSeconds(1f);
         FloorSpawner.floorSpawnerInstance.CreateBigFloorByGameOver();
         PlayerBeginGame.playerBeginGameInstance.blockByYouWin = true;     
 
@@ -83,8 +92,6 @@ public class GameOverManager : MonoBehaviour
         
         playerShootComponent = GameObject.FindWithTag("Player").GetComponent<Shoot>();
         playerShootComponent.enabled = false;
-
-        //StartCoroutine(CoroutineYouWinPhase());
     }
 
     public void CoroutineYouWinPhase()
