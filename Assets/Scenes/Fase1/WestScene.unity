@@ -4320,7 +4320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossStart: {fileID: 715291029}
   timeStart: 0
-  counter: 10
+  counter: 100
   timeText: {fileID: 676519644}
   popCorn: 0
   popCornText: {fileID: 1257956206}
