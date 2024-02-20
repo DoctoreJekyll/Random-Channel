@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6235434243441292175}
   - component: {fileID: 3558646087026337564}
   m_Layer: 0
-  m_Name: BossStart
+  m_Name: BossStartCity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 736ab717880027e438f3245c9e2f1ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boss: {fileID: 2928270648827676943, guid: 247cac37c542d6a4f86439fe7353cd09, type: 3}
+  boss: {fileID: 2928270648827676943, guid: 06d8376dfe519524b997582c0ab40a47, type: 3}
   bossPos: {fileID: 0}
   bossIsntStart: 0
 --- !u!114 &3558646087026337564

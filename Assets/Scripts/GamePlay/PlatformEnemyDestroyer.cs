@@ -23,8 +23,6 @@ public class PlatformEnemyDestroyer : MonoBehaviour
     {
         if (collision.gameObject.layer == 11 && canDesactiveEnemies) //Enemigos
         {
-            Debug.Log("Plataforma destruyo enemigo", collision.gameObject);
-
             if (collision.gameObject.GetComponent<EnemyMovement>() != null)
             {
                 collision.gameObject.GetComponent<EnemyMovement>().canRun = false;

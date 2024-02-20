@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 662336361653425976}
   - component: {fileID: 2539419995697524619}
   m_Layer: 0
-  m_Name: Boss
+  m_Name: BossHouse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de8c23a9eda2144429e00109fb901fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 5
+  life: 10
   isABoss: 1
 --- !u!114 &662336361653425976
 MonoBehaviour:
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 1862378636481649646, guid: dc68fb7dc803fc242802d4f044df9e2b, type: 3}
   shootPos: {fileID: 5681507414867508410}
-  timeToShoot: 1.8
+  timeToShoot: 1.25
 --- !u!61 &2539419995697524619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 4883243366925890048}
   - component: {fileID: 4869755878326025223}
   m_Layer: 0
-  m_Name: ArnoldEnemy
+  m_Name: Bruja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203,7 +203,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 6b63731496e18c746b510a4e3ec1b0e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 88baf9c5c7a7b5c43b72a39de592d870, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -224,7 +224,7 @@ Animator:
   m_GameObject: {fileID: 4122398086294119978}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e1d4aa540b356c1449ff791c5fa82d21, type: 2}
+  m_Controller: {fileID: 9100000, guid: 121690ddb2c408643b92742665e56e19, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -271,7 +271,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.25}
-    oldSize: {x: 1.92, y: 3}
+    oldSize: {x: 1.92, y: 3.05}
     newSize: {x: 1.92, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
