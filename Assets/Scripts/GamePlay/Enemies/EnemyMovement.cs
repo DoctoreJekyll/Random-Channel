@@ -20,7 +20,8 @@ public class EnemyMovement : MonoBehaviour
     {
         if (canRun)
         {
-            rb2D.velocity = enemyMovement * Time.deltaTime;
+            float velocity = enemyMovement.x;
+            rb2D.velocity = new Vector2(velocity * Time.deltaTime, rb2D.velocity.y);
         }
     }
 

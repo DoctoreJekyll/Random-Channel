@@ -4320,7 +4320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossStart: {fileID: 715291029}
   timeStart: 0
-  counter: 100
+  counter: 30
   timeText: {fileID: 676519644}
   popCorn: 0
   popCornText: {fileID: 1257956206}
@@ -7067,7 +7067,7 @@ MonoBehaviour:
   delayTime: 1
   source: {fileID: 454044057}
   retroButtonClip: {fileID: 8300000, guid: b4f726c8374d58f4fbc2bfe593daa7e0, type: 3}
-  sceneIndex: 3
+  sceneIndex: 5
 --- !u!95 &1501346290
 Animator:
   serializedVersion: 5
@@ -8503,7 +8503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1841662722
 RectTransform:
   m_ObjectHideFlags: 0

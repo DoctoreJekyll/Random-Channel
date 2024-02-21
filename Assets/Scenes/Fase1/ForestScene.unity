@@ -894,7 +894,6 @@ Transform:
   - {fileID: 1993653161}
   - {fileID: 1923835746}
   - {fileID: 2885275125582135617}
-  - {fileID: 1115677738}
   - {fileID: 6379871786702582903}
   - {fileID: 1268558905479032438}
   - {fileID: 2007419201}
@@ -4236,7 +4235,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossStart: {fileID: 715291029}
   timeStart: 0
-  counter: 100
+  counter: 30
   timeText: {fileID: 676519644}
   popCorn: 0
   popCornText: {fileID: 1257956206}
@@ -5402,104 +5401,6 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6688912210730629742, guid: 937d58603a958a44d8514d846c1a304d, type: 3}
   m_PrefabInstance: {fileID: 1058063616389592835}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1115677737
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 228700468}
-    m_Modifications:
-    - target: {fileID: 2077614847473212455, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: m_Constraints
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2077614847473212455, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2077614847473212455, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410224931619669416, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6110699692407134502, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -28.58267
-      objectReference: {fileID: 0}
-    - target: {fileID: 6110699692407134502, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -11.317875
-      objectReference: {fileID: 0}
-    - target: {fileID: 6110699692407134502, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.049561024
-      objectReference: {fileID: 0}
-    - target: {fileID: 6110699692407134502, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6110699692407134502, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6110699692407134502, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6110699692407134502, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6110699692407134502, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6110699692407134502, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6110699692407134502, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6888443692782124820, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: canRun
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6888443692782124820, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: isHole
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6888443692782124820, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: smoothTime
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6888443692782124820, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: platformMovement.x
-      value: -300
-      objectReference: {fileID: 0}
-    - target: {fileID: 7468215067696751241, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: m_Name
-      value: AgujeroSuelo2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7468215067696751241, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
---- !u!4 &1115677738 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6110699692407134502, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
-  m_PrefabInstance: {fileID: 1115677737}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1130835660 stripped
 GameObject:
