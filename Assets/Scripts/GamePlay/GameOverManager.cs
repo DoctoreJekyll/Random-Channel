@@ -8,6 +8,7 @@ public class GameOverManager : MonoBehaviour
 {
     public static GameOverManager gameOverManagerInstance;
 
+    [SerializeField] private float timeToStartWinCorroutine;
     [SerializeField] Parallax[] parallaxs;
     [SerializeField] PlatformMovement[] platforms;
     [SerializeField] PopCorn[] popCorns;
@@ -79,7 +80,7 @@ public class GameOverManager : MonoBehaviour
 
     IEnumerator WinCorroutine()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(timeToStartWinCorroutine);
         FloorSpawner.floorSpawnerInstance.CreateBigFloorByGameOver();
         PlayerBeginGame.playerBeginGameInstance.blockByYouWin = true;     
 
@@ -101,20 +102,24 @@ public class GameOverManager : MonoBehaviour
 
         StopMovements();
 
-        // popCorns = FindObjectsOfType<PopCorn>();
-        // for (int i = 0; i < popCorns.Length; i++)
-        // {
-        //     popCorns[i].popCornMovement = Vector2.zero;
-        // }
+        if (!ScoreManager.scoreManagerInstance.needBoss)
+        {
+            popCorns = FindObjectsOfType<PopCorn>();
+            for (int i = 0; i < popCorns.Length; i++)
+            {
+                popCorns[i].popCornMovement = Vector2.zero;
+            }
 
-        // enemyMovements = FindObjectsOfType<EnemyMovement>();
-        // for (int i = 0; i < enemyMovements.Length; i++)
-        // {
-        //     enemyMovements[i].enemyMovement = Vector2.zero;
-        //     enemyMovements[i].gameObject.GetComponent<Collider2D>().enabled = false; //Nuevo
-        //     enemyMovements[i].gameObject.GetComponent<Rigidbody2D>().gravityScale = 0f; //Nuevo
-        //     enemyMovements[i].transform.GetChild(0).GetComponent<Collider2D>().enabled = false; //Nuevo
-        // }       
+            enemyMovements = FindObjectsOfType<EnemyMovement>();
+            for (int i = 0; i < enemyMovements.Length; i++)
+            {
+                enemyMovements[i].enemyMovement = Vector2.zero;
+                enemyMovements[i].gameObject.GetComponent<Collider2D>().enabled = false; //Nuevo
+                enemyMovements[i].gameObject.GetComponent<Rigidbody2D>().gravityScale = 0f; //Nuevo
+                enemyMovements[i].transform.GetChild(0).GetComponent<Collider2D>().enabled = false; //Nuevo
+            } 
+        }
+      
     }
 
     private void StopMovements()

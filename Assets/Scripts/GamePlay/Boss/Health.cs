@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,11 +7,11 @@ namespace GamePlay.Boss
 {
     public class Health : MonoBehaviour
     {
+        [SerializeField] private SpriteRenderer spriteRenderer;
+        
         [SerializeField] private int life;
-
         [SerializeField] private bool isABoss;
-        
-        
+        [SerializeField] private bool invulnerable;
 
         private void Update()
         {
@@ -23,6 +24,7 @@ namespace GamePlay.Boss
             if (projectile != null)
             {
                 LoseLife();
+                StartCoroutine(HitCorroutine());
                 Destroy(projectile.gameObject);
             }
         }
@@ -39,7 +41,29 @@ namespace GamePlay.Boss
 
         private void LoseLife()
         {
-            life -= 1;
+            if (!invulnerable)
+            {
+                life -= 1;
+            }
+        }
+
+        private IEnumerator HitCorroutine()
+        {
+            invulnerable = true;
+            for (int i = 0; i < 7; i++)
+            {
+                Hit(Color.red);
+                yield return new WaitForSeconds(0.05f);
+                Hit(Color.white);
+                yield return new WaitForSeconds(0.05f);
+            }
+            Hit(Color.white);
+            invulnerable = false;
+        }
+
+        private void Hit(Color color)
+        {
+            spriteRenderer.color = color;
         }
 
         private void OnDisable()

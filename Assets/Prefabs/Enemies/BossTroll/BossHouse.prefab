@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7539606748877272594}
   - component: {fileID: 1014208738587908677}
   - component: {fileID: 2303599892183803182}
-  - component: {fileID: 662336361653425976}
   - component: {fileID: 2539419995697524619}
   m_Layer: 0
   m_Name: BossHouse
@@ -64,23 +63,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de8c23a9eda2144429e00109fb901fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 5576807182750666213}
   life: 10
   isABoss: 1
---- !u!114 &662336361653425976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2928270648827676943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a793df48925210b4fb6a801660af240e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 1862378636481649646, guid: dc68fb7dc803fc242802d4f044df9e2b, type: 3}
-  shootPos: {fileID: 5681507414867508410}
-  timeToShoot: 1.25
+  invulnerable: 0
 --- !u!61 &2539419995697524619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139,6 +125,7 @@ GameObject:
   - component: {fileID: 1354906356862132764}
   - component: {fileID: 4883243366925890048}
   - component: {fileID: 4869755878326025223}
+  - component: {fileID: 813649754336469077}
   m_Layer: 0
   m_Name: Bruja
   m_TagString: Untagged
@@ -307,6 +294,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &813649754336469077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4122398086294119978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a793df48925210b4fb6a801660af240e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1862378636481649646, guid: dc68fb7dc803fc242802d4f044df9e2b, type: 3}
+  shootPos: {fileID: 5681507414867508410}
+  timeToShoot: 1.25
+  autoShoot: 0
 --- !u!1 &5367712268218204793
 GameObject:
   m_ObjectHideFlags: 0

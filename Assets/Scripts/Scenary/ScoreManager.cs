@@ -9,6 +9,7 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager scoreManagerInstance;
     [SerializeField] private BossStart bossStart;
+    public bool needBoss;
     
 
     public bool timeStart;
@@ -38,7 +39,12 @@ public class ScoreManager : MonoBehaviour
     {
         CounterTimeMethod();
         TimeIsZero();
-        //CheckYouWinTimer();
+
+        if (!needBoss)
+        {
+            CheckYouWinTimer();
+        }
+        
     }
 
     void CounterTimeMethod()
@@ -65,7 +71,11 @@ public class ScoreManager : MonoBehaviour
             timeisZero = true;
             counter = 0;
             timeText.text = "00:00";
-            bossStart.BossPhaseInit();
+            if (needBoss)
+            {
+                bossStart.BossPhaseInit();
+            }
+            
         }
 
     }

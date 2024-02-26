@@ -3090,11 +3090,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1327511435}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 7.769226, y: -83.46155}
-  m_SizeDelta: {x: -733.5082, y: -346.1066}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 373, y: -254}
+  m_SizeDelta: {x: 66.49182, y: 104.8934}
+  m_Pivot: {x: 0, y: 1}
 --- !u!95 &563695324
 Animator:
   serializedVersion: 5
@@ -4431,8 +4431,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossStart: {fileID: 715291029}
+  needBoss: 0
   timeStart: 0
-  counter: 30
+  counter: 18
   timeText: {fileID: 676519644}
   popCorn: 0
   popCornText: {fileID: 1257956206}
@@ -8182,6 +8183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2fa9f84d076b624ab0801683f9ffde2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeToStartWinCorroutine: 0
   parallaxs:
   - {fileID: 951974236}
   - {fileID: 72796101}
@@ -8727,7 +8729,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1841662722
 RectTransform:
   m_ObjectHideFlags: 0

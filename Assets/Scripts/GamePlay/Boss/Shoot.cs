@@ -9,6 +9,7 @@ namespace GamePlay.Boss
         [SerializeField] private GameObject projectile;
         [SerializeField] private Transform shootPos;
         [SerializeField] private float timeToShoot;
+        [SerializeField] private bool autoShoot;
         private float rate;
 
         private void Start()
@@ -18,11 +19,14 @@ namespace GamePlay.Boss
 
         private void Update()
         {
-            rate -= Time.deltaTime;
-            if (rate < 0)
+            if (autoShoot)
             {
-                CreateProjectile();
-                rate = timeToShoot;
+                rate -= Time.deltaTime;
+                if (rate < 0)
+                {
+                    CreateProjectile();
+                    rate = timeToShoot;
+                }
             }
         }
 
