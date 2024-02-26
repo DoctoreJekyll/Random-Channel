@@ -8,10 +8,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager scoreManagerInstance;
-    [SerializeField] private BossStart bossStart;
-    public bool needBoss;
     
-
     public bool timeStart;
     public float counter;
     [SerializeField] Text timeText;
@@ -21,6 +18,10 @@ public class ScoreManager : MonoBehaviour
 
     [SerializeField] bool generateYouWinOneTime;
     private bool timeisZero;
+    
+    [Header("BossConfig")]
+    [SerializeField] private BossStart bossStart;
+    public bool needBoss;
 
 
     private void Awake()

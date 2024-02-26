@@ -28,6 +28,12 @@ namespace GamePlay
         }
 
         private Shoot playerShoot;
+        [SerializeField] private GameObject bossPanel;
+
+        private void Start()
+        {
+            bossPanel = GameObject.FindWithTag("BossPanel");
+        }
 
         private void OnTriggerEnter2D(Collider2D col)
         {
@@ -39,7 +45,6 @@ namespace GamePlay
                     bossIsntStart = false;
                     SetComponentsUnabled();
                     DestroyRest();
-
                     StartCoroutine(InstantiateBossCorroutine());
 
                 }
@@ -50,20 +55,26 @@ namespace GamePlay
         private void SetComponentsUnabled()
         {
             popCornSpawner.ChangeWorking();
-            //platformSpawner.ChangeWorking();
+            platformSpawner.ChangeWorking();
             enemiesSpawner.ChangeWorking();
             
         }
 
         private void DestroyRest()
         {
+            platformSpawner.DestroyThisObj();
             enemiesSpawner.DestroyThisObj();
             popCornSpawner.DestroyThisObj();
         }
 
         IEnumerator InstantiateBossCorroutine()
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(3.5f);
+            foreach (Transform child in bossPanel.transform)
+            {
+                child.gameObject.SetActive(true);
+            }
+            yield return new WaitForSeconds(5f);
             //GameOverManager.gameOverManagerInstance.StopMovements();
             playerShoot.enabled = true;
             Instantiate(boss, bossPos.position + (Vector3.right), quaternion.identity);
