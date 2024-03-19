@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e861d0dcd854d724f8583d91e62ee858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextPhase: 0
+  nextPhase: 6
 --- !u!1001 &118530103765883382
 PrefabInstance:
   m_ObjectHideFlags: 0
