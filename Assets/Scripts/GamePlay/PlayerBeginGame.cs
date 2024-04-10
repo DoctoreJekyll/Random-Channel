@@ -61,7 +61,10 @@ public class PlayerBeginGame : MonoBehaviour
             PopCornSpawner.popCornSpawnerInstance.canCreate = true;
             ScoreManager.scoreManagerInstance.timeStart = true;
             EnemiesSpawner.enemiesSpawnerInstance.canCreate = true;
-            Spawner.Instance.canCreate = true;
+            if (Spawner.Instance != null)
+            {
+                Spawner.Instance.canCreate = true;
+            }
             scenaryProps.canRun = true;
         }
     }

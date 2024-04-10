@@ -12,6 +12,12 @@ namespace GamePlay
 
         [SerializeField] private GameObject[] objectsS;
         [SerializeField] private bool randomInstantiate;
+        
+        [Header("Set Time")]
+        [SerializeField] private bool isSet;
+        [SerializeField] private float min;
+        [SerializeField] private float max;
+        
          private float timer;
 
         public bool canCreate;
@@ -30,7 +36,9 @@ namespace GamePlay
             var position = transform.position;
             pos1 = position + new Vector3(0f,2f,0f);
             pos2 = position + new Vector3(0f, -2f - 0f);
-            timer = Random.Range(7f, 10f);
+            
+            timer = !isSet ? Random.Range(7f, 10f) : Random.Range(min, max);
+            
         }
 
         private void CreateObj()
@@ -56,7 +64,7 @@ namespace GamePlay
                     if (timer < 0)
                     {
                         CreateObj();
-                        timer = Random.Range(4f, 6f);
+                        timer = !isSet ? Random.Range(4f, 6f) : Random.Range(min, max);
                     }
                 }
             }
