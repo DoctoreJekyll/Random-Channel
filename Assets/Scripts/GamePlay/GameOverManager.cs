@@ -8,6 +8,8 @@ public class GameOverManager : MonoBehaviour
 {
     public static GameOverManager gameOverManagerInstance;
 
+    private bool isWinning;
+
     [SerializeField] private float timeToStartWinCorroutine;
     [SerializeField] Parallax[] parallaxs;
     [SerializeField] PlatformMovement[] platforms;
@@ -24,57 +26,63 @@ public class GameOverManager : MonoBehaviour
     private void Awake()
     {
         gameOverManagerInstance = this;
+        isWinning = false;
     }
 
     public void InitializeGameOver(bool isEnemy) 
     {
-        if (isEnemy)
+
+        if (!isWinning)
         {
-            int temp = Random.Range(0, gameOverClips.Length);
-            MusicManager.musicManagerInstance.PlayFxSound(gameOverClips[temp]);
-        }
-        else
-        {
-            MusicManager.musicManagerInstance.PlayFxSound(clipCaida);
+            if (isEnemy)
+            {
+                int temp = Random.Range(0, gameOverClips.Length);
+                MusicManager.musicManagerInstance.PlayFxSound(gameOverClips[temp]);
+            }
+            else
+            {
+                MusicManager.musicManagerInstance.PlayFxSound(clipCaida);
+            }
+
+            for(int i=0; i < parallaxs.Length; i++)
+            {
+                parallaxs[i].ChangeParallaxState(true);
+            }
+
+            platforms = FindObjectsOfType<PlatformMovement>();
+            for (int i = 0; i < platforms.Length; i++)
+            {
+                platforms[i].platformMovement = Vector2.zero;
+            }
+
+            PlatformSpawner.platformSpawnerInstance.isGameOver = true;
+            FloorSpawner.floorSpawnerInstance.isGameOver = true;
+
+            popCorns = FindObjectsOfType<PopCorn>();
+            for (int i = 0; i < popCorns.Length; i++)
+            {
+                popCorns[i].popCornMovement = Vector2.zero;
+            }
+
+            enemyMovements = FindObjectsOfType<EnemyMovement>();
+            for (int i = 0; i < enemyMovements.Length; i++)
+            {
+                enemyMovements[i].enemyMovement = Vector2.zero;
+            }
+
+            PopCornSpawner.popCornSpawnerInstance.canCreate = false;
+            ScoreManager.scoreManagerInstance.timeStart = false;
+            EnemiesSpawner.enemiesSpawnerInstance.canCreate = false;
+            gameOverPanel.SetActive(true);
         }
 
-        for(int i=0; i < parallaxs.Length; i++)
-        {
-            parallaxs[i].ChangeParallaxState(true);
-        }
-
-        platforms = FindObjectsOfType<PlatformMovement>();
-        for (int i = 0; i < platforms.Length; i++)
-        {
-            platforms[i].platformMovement = Vector2.zero;
-        }
-
-        PlatformSpawner.platformSpawnerInstance.isGameOver = true;
-        FloorSpawner.floorSpawnerInstance.isGameOver = true;
-
-        popCorns = FindObjectsOfType<PopCorn>();
-        for (int i = 0; i < popCorns.Length; i++)
-        {
-            popCorns[i].popCornMovement = Vector2.zero;
-        }
-
-        enemyMovements = FindObjectsOfType<EnemyMovement>();
-        for (int i = 0; i < enemyMovements.Length; i++)
-        {
-            enemyMovements[i].enemyMovement = Vector2.zero;
-        }
-
-        PopCornSpawner.popCornSpawnerInstance.canCreate = false;
-        ScoreManager.scoreManagerInstance.timeStart = false;
-        EnemiesSpawner.enemiesSpawnerInstance.canCreate = false;
-        gameOverPanel.SetActive(true);
     }
-    
     
 
     public void InitilizeYouWin()
     {
         StartCoroutine(WinCorroutine());
+        isWinning = true;
         //StartCoroutine(CoroutineYouWinPhase());
     }
 
@@ -116,7 +124,7 @@ public class GameOverManager : MonoBehaviour
                 enemyMovements[i].enemyMovement = Vector2.zero;
                 enemyMovements[i].gameObject.GetComponent<Collider2D>().enabled = false; //Nuevo
                 enemyMovements[i].gameObject.GetComponent<Rigidbody2D>().gravityScale = 0f; //Nuevo
-                enemyMovements[i].transform.GetChild(0).GetComponent<Collider2D>().enabled = false; //Nuevo
+                //enemyMovements[i].transform.GetChild(0).GetComponent<Collider2D>().enabled = false; //Nuevo
             } 
         }
       

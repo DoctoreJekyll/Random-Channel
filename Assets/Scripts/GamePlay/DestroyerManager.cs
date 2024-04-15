@@ -27,8 +27,15 @@ public class DestroyerManager : MonoBehaviour
         }
         else if (collision.gameObject.layer == 11) //Enemigos
         {
-            collision.gameObject.GetComponent<EnemyMovement>().canRun = false;
-            collision.gameObject.SetActive(false);
+            if (collision.gameObject.GetComponent<EnemyMovement>() != null)//Por si es un proyectil
+            {
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                collision.gameObject.GetComponent<EnemyMovement>().canRun = false;
+                collision.gameObject.SetActive(false);
+            }
         }
     }
 }

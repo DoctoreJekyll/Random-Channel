@@ -27,7 +27,7 @@ namespace GamePlay
 
         private void Start()
         {
-            //Destroy(this.gameObject, 6f);
+            Destroy(this.gameObject, 8f);
         }
 
         private void Update()

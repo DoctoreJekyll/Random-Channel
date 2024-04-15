@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ExitSignal : MonoBehaviour
 {
     [SerializeField] int nextPhase;
+    [SerializeField] private bool autoLoad;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,6 +21,24 @@ public class ExitSignal : MonoBehaviour
     IEnumerator CoroutineNextLevel()
     {
         yield return new WaitForSeconds(2.5f);
+        if (!autoLoad)
+        {
+            LoadSceneWithParam();
+        }
+        else
+        {
+            LoadSceneWithoutParam();
+        }
+    }
+
+    private void LoadSceneWithParam()
+    {
         SceneManager.LoadScene(nextPhase);
+    }
+
+    private void LoadSceneWithoutParam()
+    {
+        int newScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(newScene + 1);
     }
 }

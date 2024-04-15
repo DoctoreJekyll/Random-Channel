@@ -33,6 +33,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Fase2/SpaceScene.unity
     guid: c73ec7461d2134842babe309261e0419
   - enabled: 1
-    path: Assets/Scenes/Fase2/SuperCityScee.unity
-    guid: c8e88658a9b2684408800ead63c9fb1a
+    path: Assets/Scenes/Fase2/VegasScene[Boss].unity
+    guid: 7dbb0d32f6141e646943219a02fe2923
+  - enabled: 1
+    path: Assets/Scenes/Comic3.unity
+    guid: 162c3245657dc0e408808b5b0d77e65e
+  - enabled: 1
+    path: Assets/Scenes/Fase3/ResplandorCasa.unity
+    guid: 2c34baa91896f6340949926e2ffbc845
+  - enabled: 1
+    path: Assets/Scenes/Fase3/ResplandorBar.unity
+    guid: 97f7b86e769ee6b46a0d613301b8317a
+  - enabled: 1
+    path: Assets/Scenes/Fase3/ResplandorLaberinto.unity
+    guid: ad8b8ca7aa634f34ead051e833757b0a
   m_configObjects: {}

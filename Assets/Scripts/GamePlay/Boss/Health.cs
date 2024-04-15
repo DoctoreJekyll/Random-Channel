@@ -13,19 +13,25 @@ namespace GamePlay.Boss
         [SerializeField] private bool isABoss;
         [SerializeField] private bool invulnerable;
 
-        private void Update()
-        {
-            Dead();
-        }
+        private Rigidbody2D rb2d;
+        [SerializeField] private CapsuleCollider2D collider2D;
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            Projectile projectile = col.GetComponent<Projectile>();
-            if (projectile != null)
+            if (col.gameObject.layer == 11)
             {
-                LoseLife();
-                StartCoroutine(HitCorroutine());
-                Destroy(projectile.gameObject);
+                GameOverManager.gameOverManagerInstance.InitializeGameOver(true);
+            }
+            else
+            {
+                Projectile projectile = col.GetComponent<Projectile>();
+                if (projectile != null)
+                {
+                    //LoseLife();
+                    //StartCoroutine(HitCorroutine());
+                    GameOverManager.gameOverManagerInstance.InitializeGameOver(true);
+                    Destroy(projectile.gameObject);
+                }
             }
         }
 

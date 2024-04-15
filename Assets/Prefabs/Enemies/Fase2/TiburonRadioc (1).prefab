@@ -166,8 +166,8 @@ MonoBehaviour:
   - {fileID: 3164942685776775188, guid: 7fc36e8aee5241d45a9c17b9be7fe2e9, type: 3}
   randomInstantiate: 0
   isSet: 1
-  min: 1.5
-  max: 2
+  min: 2
+  max: 4
   canCreate: 1
   work: 1
 --- !u!1 &7470815428205615604
