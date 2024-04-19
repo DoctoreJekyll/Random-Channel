@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a793df48925210b4fb6a801660af240e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 6686774916866512926, guid: d2b252c613ea8c847b6cd1129fe51050, type: 3}
+  projectile: {fileID: 6686774916866512926, guid: c8bdb936fbe261e4f9e59fa11db98e93, type: 3}
   shootPos: {fileID: 1338718046505207556}
   timeToShoot: 1.25
   autoShoot: 0
@@ -401,6 +401,7 @@ MonoBehaviour:
   life: 10
   isABoss: 1
   invulnerable: 0
+  collider2D: {fileID: 0}
 --- !u!61 &1083902995683126089
 BoxCollider2D:
   m_ObjectHideFlags: 0
