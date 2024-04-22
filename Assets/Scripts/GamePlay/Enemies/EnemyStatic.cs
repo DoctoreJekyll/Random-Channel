@@ -8,6 +8,7 @@ public class EnemyStatic : MonoBehaviour
     {
         if(collision.gameObject.layer == 8)
         {
+            Debug.Log(collision.name);
             GameOverManager.gameOverManagerInstance.InitializeGameOver(true);
         }
         else if(collision.gameObject.layer == 10)

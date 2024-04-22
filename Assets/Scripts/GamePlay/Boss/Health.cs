@@ -20,6 +20,7 @@ namespace GamePlay.Boss
         {
             if (col.gameObject.layer == 11)
             {
+                Debug.Log(col.name);
                 GameOverManager.gameOverManagerInstance.InitializeGameOver(true);
             }
             else
@@ -27,12 +28,16 @@ namespace GamePlay.Boss
                 Projectile projectile = col.GetComponent<Projectile>();
                 if (projectile != null)
                 {
-                    //LoseLife();
-                    //StartCoroutine(HitCorroutine());
-                    GameOverManager.gameOverManagerInstance.InitializeGameOver(true);
+                    LoseLife();
+                    StartCoroutine(HitCorroutine());
                     Destroy(projectile.gameObject);
                 }
             }
+        }
+
+        private void Update()
+        {
+            Dead();
         }
 
         private void Dead()

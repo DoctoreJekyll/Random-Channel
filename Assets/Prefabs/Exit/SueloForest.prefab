@@ -323,6 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextPhase: 4
+  autoLoad: 1
 --- !u!1001 &118530103765883382
 PrefabInstance:
   m_ObjectHideFlags: 0

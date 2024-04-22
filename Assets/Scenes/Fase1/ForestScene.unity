@@ -2173,8 +2173,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de8c23a9eda2144429e00109fb901fc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
   life: 50
   isABoss: 0
+  invulnerable: 0
+  collider2D: {fileID: 0}
 --- !u!70 &394501891
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2225,6 +2228,7 @@ MonoBehaviour:
   projectile: {fileID: 1862378636481649646, guid: 73737f8de633c0540a20d52949ddb32a, type: 3}
   shootPos: {fileID: 270635661}
   timeToShoot: 1
+  autoShoot: 0
 --- !u!1001 &397106615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4234,14 +4238,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa933f5f3fa1b414c9dc4af298f94a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossStart: {fileID: 715291029}
-  needBoss: 0
   timeStart: 0
   counter: 18
   timeText: {fileID: 676519644}
   popCorn: 0
   popCornText: {fileID: 1257956206}
   generateYouWinOneTime: 0
+  bossStart: {fileID: 715291029}
+  needBoss: 0
 --- !u!1 &876548990
 GameObject:
   m_ObjectHideFlags: 0
@@ -8417,7 +8421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1841662722
 RectTransform:
   m_ObjectHideFlags: 0

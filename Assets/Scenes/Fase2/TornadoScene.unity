@@ -2182,6 +2182,7 @@ MonoBehaviour:
   life: 50
   isABoss: 0
   invulnerable: 0
+  collider2D: {fileID: 0}
 --- !u!70 &394501891
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -7749,7 +7750,7 @@ MonoBehaviour:
   delayTime: 1
   source: {fileID: 454044057}
   retroButtonClip: {fileID: 8300000, guid: b4f726c8374d58f4fbc2bfe593daa7e0, type: 3}
-  sceneIndex: 3
+  sceneIndex: 7
 --- !u!95 &1501346290
 Animator:
   serializedVersion: 5

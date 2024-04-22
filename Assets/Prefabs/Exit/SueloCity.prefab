@@ -278,6 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextPhase: 5
+  autoLoad: 1
 --- !u!61 &6702399832885102720
 BoxCollider2D:
   m_ObjectHideFlags: 0

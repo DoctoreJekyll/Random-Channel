@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using GamePlay;
 using GamePlay.Boss;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class GameOverManager : MonoBehaviour
 {
@@ -31,7 +33,6 @@ public class GameOverManager : MonoBehaviour
 
     public void InitializeGameOver(bool isEnemy) 
     {
-
         if (!isWinning)
         {
             if (isEnemy)
