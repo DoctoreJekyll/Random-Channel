@@ -3862,7 +3862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &677231405
 Transform:
   m_ObjectHideFlags: 0
@@ -5092,7 +5092,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d72c91c16d930104bbd4c974a2fc05f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0cc2dbc4a599a304bba25649f40c607a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5482,7 +5482,7 @@ Transform:
   m_GameObject: {fileID: 951974235}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.58, z: 0}
+  m_LocalPosition: {x: 0, y: -0.15, z: 0}
   m_LocalScale: {x: 25, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5621,7 +5621,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d72c91c16d930104bbd4c974a2fc05f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0cc2dbc4a599a304bba25649f40c607a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9703,7 +9703,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d72c91c16d930104bbd4c974a2fc05f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0cc2dbc4a599a304bba25649f40c607a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10290,7 +10290,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d72c91c16d930104bbd4c974a2fc05f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0cc2dbc4a599a304bba25649f40c607a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10870,7 +10870,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d72c91c16d930104bbd4c974a2fc05f1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0cc2dbc4a599a304bba25649f40c607a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11468,7 +11468,7 @@ PrefabInstance:
     - target: {fileID: 809175534397012814, guid: 66af129c4178274499b0beafab55213e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d72c91c16d930104bbd4c974a2fc05f1, type: 3}
+      objectReference: {fileID: 21300000, guid: 0cc2dbc4a599a304bba25649f40c607a, type: 3}
     - target: {fileID: 2690290711491341066, guid: 66af129c4178274499b0beafab55213e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.19
