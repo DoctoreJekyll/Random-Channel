@@ -11294,11 +11294,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3963391208695359060, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
       propertyPath: max
-      value: 14
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3963391208695359060, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
       propertyPath: min
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3963391208695359060, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
       propertyPath: work
@@ -11308,6 +11308,22 @@ PrefabInstance:
       propertyPath: isSet
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3963391208695359060, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
+      propertyPath: objectsS.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3963391208695359060, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
+      propertyPath: objectsS.Array.data[4]
+      value: 
+      objectReference: {fileID: 4026831798873765571, guid: a3c9e09f57d5b5b4699bbf334dc9ecae, type: 3}
+    - target: {fileID: 3963391208695359060, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
+      propertyPath: objectsS.Array.data[5]
+      value: 
+      objectReference: {fileID: 4026831798873765571, guid: 39ba77a8289ddc74eaef8f45d6a16a2a, type: 3}
+    - target: {fileID: 3963391208695359060, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
+      propertyPath: objectsS.Array.data[6]
+      value: 
+      objectReference: {fileID: 4026831798873765571, guid: d82fb56702b82e841bcf13108cbe9241, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
