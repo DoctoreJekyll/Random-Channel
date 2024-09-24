@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fase3/ResplandorLaberitno[Boss].unity
     guid: bce35e10e2c4a374498a3d4da1f16c0a
+  - enabled: 1
+    path: Assets/Scenes/Comic4.unity
+    guid: aaf3a4d760280e5488c7e666a670124c
   m_configObjects: {}
