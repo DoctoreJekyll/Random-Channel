@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 6500179859641709387}
   - component: {fileID: 6493773095201319077}
   - component: {fileID: 1083902995683126089}
+  - component: {fileID: 1090586125314941536}
   m_Layer: 0
   m_Name: BossVegas
   m_TagString: Untagged
@@ -398,10 +399,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 4394600600318104196}
-  life: 10
+  life: 2
   isABoss: 1
   invulnerable: 0
-  collider2D: {fileID: 0}
+  col2d: {fileID: 0}
+  animator: {fileID: 8826356043171197724}
+  rb2d: {fileID: 6574553951552656916}
 --- !u!61 &1083902995683126089
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -447,6 +450,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0278497, y: 2.8110893}
   m_EdgeRadius: 0
+--- !u!114 &1090586125314941536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5980064760683807144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b69034becb8965445977d44c3a660326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mGameObject: {fileID: 6500179859641709387}
+  mAnimator: {fileID: 8826356043171197724}
 --- !u!1 &6822607974402166725
 GameObject:
   m_ObjectHideFlags: 0

@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f56b12758f6cd241804337fa30f74a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollVelocity: 0.125
+  scrollVelocity: 0.2
   rendererM: {fileID: 72796103}
   isStopParallax: 1
   counterTime: 0
@@ -974,7 +974,7 @@ Transform:
   m_GameObject: {fileID: 228700467}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.98267, y: 6.317875, z: -2.549561}
+  m_LocalPosition: {x: 6.98267, y: 6.5, z: -2.549561}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1614,13 +1614,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossVegas
       objectReference: {fileID: 0}
+    - target: {fileID: 5980064760683807144, guid: 3121eeb626db54a4dac809df7b667cb1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8630973111406740149, guid: 3121eeb626db54a4dac809df7b667cb1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.6410217
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8630973111406740149, guid: 3121eeb626db54a4dac809df7b667cb1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.0448496
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8630973111406740149, guid: 3121eeb626db54a4dac809df7b667cb1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2403,7 +2407,9 @@ MonoBehaviour:
   life: 3
   isABoss: 0
   invulnerable: 0
-  collider2D: {fileID: 0}
+  col2d: {fileID: 0}
+  animator: {fileID: 0}
+  rb2d: {fileID: 0}
 --- !u!70 &394501891
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3800,7 +3806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &677231405
 Transform:
   m_ObjectHideFlags: 0
@@ -4765,7 +4771,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8, y: 0.5598422}
+  m_Size: {x: 8, y: 0.23}
   m_EdgeRadius: 0
 --- !u!50 &876548992
 Rigidbody2D:
@@ -5224,7 +5230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f56b12758f6cd241804337fa30f74a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollVelocity: 0.23
+  scrollVelocity: 0.21
   rendererM: {fileID: 951974238}
   isStopParallax: 1
   counterTime: 0
@@ -5309,7 +5315,7 @@ Transform:
   m_GameObject: {fileID: 951974235}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.65, z: 0}
+  m_LocalPosition: {x: 0, y: -0.47, z: 0}
   m_LocalScale: {x: 25, y: 12, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5378,7 +5384,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8, y: 0.5598422}
+  m_Size: {x: 8, y: 0.23}
   m_EdgeRadius: 0
 --- !u!50 &959246307
 Rigidbody2D:
@@ -5638,13 +5644,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossHouse
       objectReference: {fileID: 0}
+    - target: {fileID: 2928270648827676943, guid: 997f9d8b0da2cf94ca78c241adef51c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7539606748877272594, guid: 997f9d8b0da2cf94ca78c241adef51c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.64
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7539606748877272594, guid: 997f9d8b0da2cf94ca78c241adef51c7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.43
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7539606748877272594, guid: 997f9d8b0da2cf94ca78c241adef51c7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6284,13 +6294,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossResplandor
       objectReference: {fileID: 0}
+    - target: {fileID: 1059350953978723400, guid: 701af08767b0e474b89eaa9d49022898, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5065102472734514411, guid: 701af08767b0e474b89eaa9d49022898, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.4253173
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5065102472734514411, guid: 701af08767b0e474b89eaa9d49022898, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.666396
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5065102472734514411, guid: 701af08767b0e474b89eaa9d49022898, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10056,7 +10070,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8, y: 0.5598422}
+  m_Size: {x: 8, y: 0.23}
   m_EdgeRadius: 0
 --- !u!50 &1923835744
 Rigidbody2D:
@@ -10571,7 +10585,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8, y: 0.5598422}
+  m_Size: {x: 8, y: 0.23}
   m_EdgeRadius: 0
 --- !u!50 &1993653159
 Rigidbody2D:
@@ -10785,7 +10799,8 @@ PrefabInstance:
       propertyPath: m_UsedByEffector
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5548856902552076681, guid: aa912a2c3e0c98246bc9245da940862b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3224743231519820489, guid: aa912a2c3e0c98246bc9245da940862b, type: 3}
@@ -11158,7 +11173,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8, y: 0.5598422}
+  m_Size: {x: 8, y: 0.23}
   m_EdgeRadius: 0
 --- !u!50 &2080597619
 Rigidbody2D:
@@ -11882,15 +11897,23 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 415c24f18de56b94bb9829abbbdb83ae, type: 3}
     - target: {fileID: 1904562538533198111, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2.3329418
       objectReference: {fileID: 0}
     - target: {fileID: 1904562538533198111, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.9719566
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904562538533198111, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6898202
       objectReference: {fileID: 0}
     - target: {fileID: 1904562538533198111, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904562538533198111, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6110699692407134502, guid: dbe558bf403a6934bae4c03197d9f531, type: 3}
       propertyPath: m_LocalScale.x
@@ -11974,6 +11997,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 87e798f8a9a1e1e4399b08c07636b6fd, type: 3}
+    - target: {fileID: 2690290711491341066, guid: 66af129c4178274499b0beafab55213e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.23
+      objectReference: {fileID: 0}
     - target: {fileID: 2690290711491341066, guid: 66af129c4178274499b0beafab55213e, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 8

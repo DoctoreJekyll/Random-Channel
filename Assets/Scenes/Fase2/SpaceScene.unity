@@ -1641,7 +1641,7 @@ MonoBehaviour:
   - {fileID: 1083724496}
   - {fileID: 425091553}
   spawnerTime:
-  - 2
+  - 1
   - 3
   - 5
   - 6
@@ -2276,7 +2276,9 @@ MonoBehaviour:
   life: 50
   isABoss: 0
   invulnerable: 0
-  collider2D: {fileID: 394501889}
+  col2d: {fileID: 0}
+  animator: {fileID: 0}
+  rb2d: {fileID: 0}
 --- !u!70 &394501891
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2554,6 +2556,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8780284864117721458, guid: cbaaad95cad86994198eaac077243594, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2736,6 +2742,7 @@ Transform:
   - {fileID: 2115425151}
   - {fileID: 353572630}
   - {fileID: 715291028}
+  - {fileID: 1594721023}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &454044056
@@ -5034,6 +5041,7 @@ MonoBehaviour:
   generateYouWinOneTime: 0
   bossStart: {fileID: 715291029}
   needBoss: 0
+  isInfinity: 0
 --- !u!1 &876548990
 GameObject:
   m_ObjectHideFlags: 0
@@ -6097,6 +6105,7 @@ MonoBehaviour:
   source: {fileID: 454044057}
   retroButtonClip: {fileID: 8300000, guid: b4f726c8374d58f4fbc2bfe593daa7e0, type: 3}
   sceneIndex: 0
+  sceneName: 
 --- !u!95 &997269454
 Animator:
   serializedVersion: 5
@@ -7859,7 +7868,6 @@ Transform:
   - {fileID: 72796105}
   - {fileID: 157131078}
   - {fileID: 755655554}
-  - {fileID: 1594721023}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1445506509
@@ -8188,6 +8196,7 @@ MonoBehaviour:
   source: {fileID: 454044057}
   retroButtonClip: {fileID: 8300000, guid: b4f726c8374d58f4fbc2bfe593daa7e0, type: 3}
   sceneIndex: 8
+  sceneName: 
 --- !u!95 &1501346290
 Animator:
   serializedVersion: 5
@@ -11246,7 +11255,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1425643541}
+    m_TransformParent: {fileID: 447569649}
     m_Modifications:
     - target: {fileID: 1139413798401169787, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
       propertyPath: m_Name
@@ -11258,7 +11267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1920714720802347029, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.94
       objectReference: {fileID: 0}
     - target: {fileID: 1920714720802347029, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11270,15 +11279,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1920714720802347029, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1920714720802347029, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1920714720802347029, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1920714720802347029, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -11294,11 +11303,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3963391208695359060, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
       propertyPath: max
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3963391208695359060, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
       propertyPath: min
-      value: 4
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3963391208695359060, guid: dbdafa8866d647149a19715b98fd778c, type: 3}
       propertyPath: work

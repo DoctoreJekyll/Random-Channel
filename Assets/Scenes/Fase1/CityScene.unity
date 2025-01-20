@@ -2336,7 +2336,9 @@ MonoBehaviour:
   life: 50
   isABoss: 0
   invulnerable: 0
-  collider2D: {fileID: 0}
+  col2d: {fileID: 0}
+  animator: {fileID: 0}
+  rb2d: {fileID: 0}
 --- !u!70 &394501891
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3862,7 +3864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &677231405
 Transform:
   m_ObjectHideFlags: 0

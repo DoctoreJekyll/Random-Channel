@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using GamePlay.Boss;
 using UnityEngine;
 
 public class EnemyStatic : MonoBehaviour
@@ -8,8 +9,8 @@ public class EnemyStatic : MonoBehaviour
     {
         if(collision.gameObject.layer == 8)
         {
-            Debug.Log(collision.name);
-            GameOverManager.gameOverManagerInstance.InitializeGameOver(true);
+            Health health = collision.gameObject.GetComponent<Health>();
+            health.CallDeadMoment();
         }
         else if(collision.gameObject.layer == 10)
         {

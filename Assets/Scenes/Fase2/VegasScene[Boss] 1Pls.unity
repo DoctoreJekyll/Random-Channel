@@ -2278,7 +2278,9 @@ MonoBehaviour:
   life: 50
   isABoss: 0
   invulnerable: 0
-  collider2D: {fileID: 394501891}
+  col2d: {fileID: 0}
+  animator: {fileID: 0}
+  rb2d: {fileID: 0}
 --- !u!70 &394501891
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -2810,7 +2812,7 @@ MonoBehaviour:
   holeSeparation: {x: 11.5, y: 0, z: 0}
   doubleHoleSeparation: {x: 6.5, y: 0, z: 0}
   isGameOver: 0
-  bigFloorFinalPhase: {fileID: 430036675734253284, guid: 02586e6275b4f9844b8350a0e5b04890, type: 3}
+  bigFloorFinalPhase: {fileID: 1269962208167140317, guid: 78cd08a022220184cafbad054082edcd, type: 3}
 --- !u!4 &473715366
 Transform:
   m_ObjectHideFlags: 0

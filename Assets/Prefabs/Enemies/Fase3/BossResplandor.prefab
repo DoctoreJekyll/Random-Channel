@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8393039566436863743}
   - component: {fileID: 7476028092928150439}
   - component: {fileID: 9008346769849076097}
+  - component: {fileID: 3995618921998700616}
   m_Layer: 0
   m_Name: BossResplandor
   m_TagString: Untagged
@@ -64,10 +65,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 8386418149087183523}
-  life: 10
+  life: 2
   isABoss: 1
   invulnerable: 0
-  collider2D: {fileID: 0}
+  col2d: {fileID: 0}
+  animator: {fileID: 1084639058864700120}
+  rb2d: {fileID: 8340237592467255155}
 --- !u!61 &9008346769849076097
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -113,6 +116,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0278497, y: 2.3467765}
   m_EdgeRadius: 0
+--- !u!114 &3995618921998700616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059350953978723400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b69034becb8965445977d44c3a660326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mGameObject: {fileID: 8393039566436863743}
+  mAnimator: {fileID: 1084639058864700120}
 --- !u!1 &3457724888263026637
 GameObject:
   m_ObjectHideFlags: 0

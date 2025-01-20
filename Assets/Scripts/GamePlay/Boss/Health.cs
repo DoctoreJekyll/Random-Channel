@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,16 +13,20 @@ namespace GamePlay.Boss
         [SerializeField] private int life;
         [SerializeField] private bool isABoss;
         [SerializeField] private bool invulnerable;
+        [SerializeField] private CapsuleCollider2D col2d;
 
-        private Rigidbody2D rb2d;
-        [SerializeField] private CapsuleCollider2D collider2D;
+        [Header("Animacion")]
+        [SerializeField] private Animator animator;
 
+        private bool colisionDead = false;//Deteccion de muerte por ciertos enemigos con layer y colision
         private void OnTriggerEnter2D(Collider2D col)
         {
-            if (col.gameObject.layer == 11)
+            if (col.gameObject.layer == 11 && dead == false)
             {
-                Debug.Log(col.name);
                 GameOverManager.gameOverManagerInstance.InitializeGameOver(true);
+                dead = true;
+                colisionDead = true;
+                Debug.Log("Creo que este es el problema?");
             }
             else
             {
@@ -40,12 +45,19 @@ namespace GamePlay.Boss
             Dead();
         }
 
+        private bool dead = false;
+        [SerializeField]private Rigidbody2D rb2d;
         private void Dead()
         {
-            if (life <= 0)
+            if (life <= 0 && dead == false)
             {
+                dead = true;
                 life = 0;
-                this.gameObject.SetActive(false);
+
+                animator.SetBool("Dead", true);
+                rb2d.bodyType = RigidbodyType2D.Dynamic;
+
+                CallDeadMoment();
             }
         }
 
@@ -77,15 +89,17 @@ namespace GamePlay.Boss
             spriteRenderer.color = color;
         }
 
-        private void OnDisable()
+        public void CallDeadMoment()
         {
             if (isABoss)
             {
+                Debug.Log("init you win");
                 GameOverManager.gameOverManagerInstance.InitilizeYouWin();
             }
-            else
+            else if (!colisionDead)
             {
                 GameOverManager.gameOverManagerInstance.InitializeGameOver(true);
+                Debug.Log("Dyng");
             }
         }
     }

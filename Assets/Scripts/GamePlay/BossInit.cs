@@ -13,7 +13,7 @@ namespace GamePlay
         private EnemiesSpawner enemiesSpawner;
 
         [SerializeField] private GameObject boss;
-        [SerializeField] private Transform bossPos;
+        [SerializeField] private Vector3 bossPos;
 
         public bool bossIsntStart;
         
@@ -23,7 +23,7 @@ namespace GamePlay
             platformSpawner = FindObjectOfType<PlatformSpawner>();
             enemiesSpawner = FindObjectOfType<EnemiesSpawner>();
 
-            bossPos = GameObject.FindWithTag("BossStart").transform;
+            bossPos = new Vector3(11, -2, 0);
             bossIsntStart = true;
         }
 
@@ -77,7 +77,7 @@ namespace GamePlay
             yield return new WaitForSeconds(5f);
             //GameOverManager.gameOverManagerInstance.StopMovements();
             playerShoot.enabled = true;
-            Instantiate(boss, bossPos.position + (Vector3.right), quaternion.identity);
+            Instantiate(boss, bossPos, quaternion.identity);
         }
     }
 }

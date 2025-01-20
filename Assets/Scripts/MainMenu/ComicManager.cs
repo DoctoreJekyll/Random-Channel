@@ -14,7 +14,7 @@ public class ComicManager : MonoBehaviour
     public void ChangePage()
     {
         pageIndex++;
-        if (pageIndex < 3)
+        if (pageIndex < comicPages.Length)
         {            
             comicPages[pageIndex].SetActive(true);
             source.PlayOneShot(clip);

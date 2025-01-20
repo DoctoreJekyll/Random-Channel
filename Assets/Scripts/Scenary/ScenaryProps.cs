@@ -28,6 +28,11 @@ namespace Scenary
 
         private void Update()
         {
+            if (PlayerBeginGame.playerBeginGameInstance.gamePlayStart)
+            {
+                canRun = true;
+            }
+            
             if (canRun)
             {
                 timeToDestroy -= Time.deltaTime;

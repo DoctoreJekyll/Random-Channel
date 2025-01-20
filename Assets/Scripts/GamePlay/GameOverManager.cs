@@ -31,18 +31,21 @@ public class GameOverManager : MonoBehaviour
         isWinning = false;
     }
 
+    private bool repairSoundBoolean;
     public void InitializeGameOver(bool isEnemy) 
     {
         if (!isWinning)
         {
-            if (isEnemy)
+            if (isEnemy && !repairSoundBoolean)
             {
                 int temp = Random.Range(0, gameOverClips.Length);
                 MusicManager.musicManagerInstance.PlayFxSound(gameOverClips[temp]);
+                repairSoundBoolean = true;
+                Debug.Log("Dyng sonidos muchos");
             }
             else
             {
-                MusicManager.musicManagerInstance.PlayFxSound(clipCaida);
+                //MusicManager.musicManagerInstance.PlayFxSound(clipCaida);
             }
 
             for(int i=0; i < parallaxs.Length; i++)

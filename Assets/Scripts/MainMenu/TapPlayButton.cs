@@ -11,6 +11,7 @@ public class TapPlayButton : MonoBehaviour
     [SerializeField] AudioClip retroButtonClip;
 
     [SerializeField] int sceneIndex;
+    [SerializeField] private string sceneName;
 
     public void TapPlayButtonMethod()
     {

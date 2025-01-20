@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1014208738587908677}
   - component: {fileID: 2303599892183803182}
   - component: {fileID: 2539419995697524619}
+  - component: {fileID: 1619033751537920245}
   m_Layer: 0
   m_Name: BossHouse
   m_TagString: Untagged
@@ -64,9 +65,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 5576807182750666213}
-  life: 10
+  life: 2
   isABoss: 1
   invulnerable: 0
+  col2d: {fileID: 0}
+  animator: {fileID: 1354906356862132764}
+  rb2d: {fileID: 4869755878326025223}
 --- !u!61 &2539419995697524619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -112,6 +116,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0278497, y: 2.8110893}
   m_EdgeRadius: 0
+--- !u!114 &1619033751537920245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2928270648827676943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b69034becb8965445977d44c3a660326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mGameObject: {fileID: 1014208738587908677}
+  mAnimator: {fileID: 1354906356862132764}
 --- !u!1 &4122398086294119978
 GameObject:
   m_ObjectHideFlags: 0

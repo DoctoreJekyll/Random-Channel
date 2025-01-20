@@ -23,6 +23,8 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private BossStart bossStart;
     public bool needBoss;
 
+    [SerializeField] private bool isInfinity;
+
 
     private void Awake()
     {
@@ -50,9 +52,16 @@ public class ScoreManager : MonoBehaviour
 
     void CounterTimeMethod()
     {
-        if (timeStart && !timeisZero)
+        if (timeStart && !timeisZero && !isInfinity)
         {
             counter -= Time.deltaTime;
+            string min = Mathf.Floor(counter / 60).ToString("00");
+            string seg = Mathf.Floor(counter % 60).ToString("00");
+            timeText.text = min + ":" + seg;
+        }
+        else if (isInfinity && timeStart)
+        {
+            counter += Time.deltaTime;
             string min = Mathf.Floor(counter / 60).ToString("00");
             string seg = Mathf.Floor(counter % 60).ToString("00");
             timeText.text = min + ":" + seg;
@@ -67,7 +76,7 @@ public class ScoreManager : MonoBehaviour
 
     private void TimeIsZero()
     {
-        if (counter <= 0 && !timeisZero)
+        if (counter <= 0 && !timeisZero && !isInfinity)
         {
             timeisZero = true;
             counter = 0;

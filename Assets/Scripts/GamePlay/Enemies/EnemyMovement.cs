@@ -18,7 +18,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (canRun)
+        if (canRun && PlayerBeginGame.playerBeginGameInstance.gamePlayStart)
         {
             float velocity = enemyMovement.x;
             rb2D.velocity = new Vector2(velocity * Time.deltaTime, rb2D.velocity.y);
@@ -27,7 +27,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 6 || collision.gameObject.layer == 9)
+        if (collision.gameObject.layer == 6 || collision.gameObject.layer == 9 && PlayerBeginGame.playerBeginGameInstance.gamePlayStart)
         {
             canRun = true;
         }

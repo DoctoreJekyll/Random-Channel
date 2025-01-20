@@ -2177,7 +2177,9 @@ MonoBehaviour:
   life: 50
   isABoss: 0
   invulnerable: 0
-  collider2D: {fileID: 0}
+  col2d: {fileID: 0}
+  animator: {fileID: 0}
+  rb2d: {fileID: 0}
 --- !u!70 &394501891
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4246,6 +4248,7 @@ MonoBehaviour:
   generateYouWinOneTime: 0
   bossStart: {fileID: 715291029}
   needBoss: 0
+  isInfinity: 0
 --- !u!1 &876548990
 GameObject:
   m_ObjectHideFlags: 0
@@ -5238,6 +5241,7 @@ MonoBehaviour:
   source: {fileID: 454044057}
   retroButtonClip: {fileID: 8300000, guid: b4f726c8374d58f4fbc2bfe593daa7e0, type: 3}
   sceneIndex: 0
+  sceneName: 
 --- !u!95 &997269454
 Animator:
   serializedVersion: 5
@@ -7043,6 +7047,7 @@ MonoBehaviour:
   source: {fileID: 454044057}
   retroButtonClip: {fileID: 8300000, guid: b4f726c8374d58f4fbc2bfe593daa7e0, type: 3}
   sceneIndex: 3
+  sceneName: 
 --- !u!95 &1501346290
 Animator:
   serializedVersion: 5
@@ -8308,7 +8313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1834991652
 MonoBehaviour:
   m_ObjectHideFlags: 0
