@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Scenary;
 using UnityEngine;
 
 public class PopCorn : MonoBehaviour
@@ -33,14 +34,14 @@ public class PopCorn : MonoBehaviour
         {
             int temp = Random.Range(0, clip.Length);
 
-            ScoreManager.scoreManagerInstance.AddPopCorn(points);
+            ScoreManager.ScoreManagerInstance.AddPopCorn(points);
             MusicManager.musicManagerInstance.PlayFxSound(clip[temp]);
             BocadilloPool.bocadilloPoolInstance.GenerateBocadillo(transform);
             gameObject.SetActive(false);
         }
         else if (collision.gameObject.layer == 8 && isDestruible)
         {
-            ScoreManager.scoreManagerInstance.AddPopCorn(points);
+            ScoreManager.ScoreManagerInstance.AddPopCorn(points);
             MusicManager.musicManagerInstance.PlayFxSound(clip[0]);
             BocadilloPool.bocadilloPoolInstance.GenerateBocadillo(transform);
             Destroy(gameObject);

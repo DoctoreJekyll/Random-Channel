@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using GamePlay;
 using GamePlay.Boss;
+using Scenary;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -75,7 +76,7 @@ public class GameOverManager : MonoBehaviour
             }
 
             PopCornSpawner.popCornSpawnerInstance.canCreate = false;
-            ScoreManager.scoreManagerInstance.timeStart = false;
+            ScoreManager.ScoreManagerInstance.timeStart = false;
             EnemiesSpawner.enemiesSpawnerInstance.canCreate = false;
             gameOverPanel.SetActive(true);
         }
@@ -100,7 +101,7 @@ public class GameOverManager : MonoBehaviour
         FloorSpawner.floorSpawnerInstance.isGameOver = true;
 
         PopCornSpawner.popCornSpawnerInstance.canCreate = false;
-        ScoreManager.scoreManagerInstance.timeStart = false;
+        ScoreManager.ScoreManagerInstance.timeStart = false;
         EnemiesSpawner.enemiesSpawnerInstance.canCreate = false;
         
         playerShootComponent = GameObject.FindWithTag("Player").GetComponent<Shoot>();
@@ -114,7 +115,7 @@ public class GameOverManager : MonoBehaviour
 
         StopMovements();
 
-        if (!ScoreManager.scoreManagerInstance.needBoss)
+        if (!ScoreManager.ScoreManagerInstance.needBoss)
         {
             popCorns = FindObjectsOfType<PopCorn>();
             for (int i = 0; i < popCorns.Length; i++)
